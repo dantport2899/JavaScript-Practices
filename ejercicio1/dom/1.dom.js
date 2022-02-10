@@ -19,6 +19,7 @@ caja.style.padding = "20px";
 caja.style.margin = "auto";
 caja.style.textAlign = "center";
 
+
 caja.className = "hola"; //agragar una clase al elemento
 
 
@@ -29,10 +30,13 @@ var todoslosdiv = document.getElementsByTagName('div');
 //todoslosdiv.forEach((valor,indice) => {
 var valor;
 for(valor in todoslosdiv){
-    var parrafo = document.createElement("p");
-    var texto = document.createTextNode(todoslosdiv[valor].textContent);
-    parrafo.appendChild(texto);
-    document.querySelector("#miseccion").appendChild(parrafo);
+    if(todoslosdiv[valor].textContent.length >= 1){
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode(todoslosdiv[valor].textContent);
+        parrafo.appendChild(texto);
+        document.querySelector("#miseccion").appendChild(parrafo);
+    }
+    
 }
 
 //conseguir elementos por su clase
