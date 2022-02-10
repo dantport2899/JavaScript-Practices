@@ -28,15 +28,42 @@ var todoslosdiv = document.getElementsByTagName('div');
 
 
 //todoslosdiv.forEach((valor,indice) => {
+var seccion = document.querySelector("#miseccion");
+var hr = document.createElement("hr");
+
 var valor;
 for(valor in todoslosdiv){
-    if(todoslosdiv[valor].textContent.length >= 1){
+    if(typeof todoslosdiv[valor].textContent == 'string'){
         var parrafo = document.createElement("p");
         var texto = document.createTextNode(todoslosdiv[valor].textContent);
-        parrafo.appendChild(texto);
-        document.querySelector("#miseccion").appendChild(parrafo);
+        parrafo.append(texto);
+        seccion.append(parrafo);
     }
     
 }
 
+seccion.append(hr);
+
 //conseguir elementos por su clase
+
+var divsrojos = document.getElementsByClassName('rojo');
+var divsamarillos = document.getElementsByClassName('amarillo');
+
+divsamarillos[0].style.background = 'yellow';
+
+for(var div in divsrojos){
+    if(divsrojos[div].className == 'rojo'){
+        divsrojos[div].style.background = "red";
+    }
+}
+
+//query selector
+
+var id = document.querySelector("#encabezado");
+console.log(id);
+
+var claserojo = document.querySelector(".rojo");
+console.log(claserojo);
+
+var todosdiv = document.querySelector("div");
+console.log(todosdiv);
