@@ -12,6 +12,19 @@ window.addEventListener('load',function(){
         var apellido = document.querySelector("#apellidos").value;
         var edad = document.querySelector("#edad").value;
 
+        if (nombre.trim() == null || nombre.trim().lenght == 0) {
+            alert('El nombre no es valido');
+            return false;
+        }
+        if (apellido.trim() == null || apellido.trim().lenght == 0) {
+            alert('El apellido no es valido');
+            return false;
+        } 
+        if (edad.trim() == null || edad <= 0 || isNaN(edad)) {
+            alert('La edad no es valida');
+            return false;
+        }        
+
         box_dashed.style.display = 'block';
 
         /*

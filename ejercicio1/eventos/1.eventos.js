@@ -21,6 +21,7 @@ window.addEventListener('load', () => {  //al hacer esto ya no es necesario carg
     //click
     boton.addEventListener('click', function () {
         cambiarcolor();
+        this.style.border = '10px solid black';  //hace referencia al elemento al que se le da click en ese momento
     });
 
     //mouse over
