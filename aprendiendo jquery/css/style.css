@@ -36,3 +36,9 @@ ul .ui-selected{
     height: 300px;
     border: 4px solid green;
 }
+
+.elemento{
+    background-color: blueviolet;
+    float: none;
+    display: none;
+}

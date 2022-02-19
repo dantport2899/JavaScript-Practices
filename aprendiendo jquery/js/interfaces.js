@@ -21,4 +21,27 @@ $(document).ready(function(){
         }
     });
 
+    //efectos
+    $("#mostrar").click(function(){
+        // $(".caja-efectos").fadeToggle('slow');
+        // $(".caja-efectos").slideToggle('slow');
+        $(".caja-efectos").toggle('shake', 4000);
+
+    });
+
+    //tooltip
+    $(document).tooltip();
+
+    //dialog
+    $("#lanzar-popup").click(function(){
+        $("#popup").dialog();
+    });
+
+    //datepicker
+    $("#calendario").datepicker();
+
+    //tabls
+
+    $("#pestanas").tabs();
+
 });
