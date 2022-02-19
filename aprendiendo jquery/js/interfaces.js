@@ -6,4 +6,19 @@ $(document).ready(function(){
 
     //Redimencionar 
     elemento.resizable();
+
+    //seleccionar
+    var lista = $('.lista-seleccionable');
+
+    // lista.selectable();
+    lista.sortable();   
+
+    //drop
+    $("#elemento-movido").draggable();
+    $("#area").droppable({
+        drop: function(){
+            console.log("has soltado algo dentro del area");
+        }
+    });
+
 });
