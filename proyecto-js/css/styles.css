@@ -10,11 +10,6 @@
     clear: both;
 }
 
-body{
-    background: url("../src/hojas.jpg");
-    background-attachment: fixed;
-}
-
 #global{
     width: 65%;
     margin: 0px auto;
@@ -29,7 +24,6 @@ body{
     font-size: 21px;
     letter-spacing: 4px;
     line-height: 75px;
-    background-color: #235E3D;
     color: white;
     text-align: center;
     width: 385px;
@@ -58,15 +52,15 @@ body{
     transition: all 300ms;
 }
 
-#menu ul li:hover{
-    background-color: #235E3D;
-}
-
 #menu ul li a{
     display: block;
     color: white;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+.bx-wrapper, .bx-viewport{
+    height: 250px !important;
 }
 
 #posts{
@@ -79,9 +73,10 @@ body{
     padding: 7px;
 }
 
-.post h2{
+h2{
     font-size: 30px;
     color: #333;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .post .date{
@@ -102,7 +97,6 @@ body{
     text-align: center;
     display: block;
     padding: 15px;
-    background: #235E3D;
     color: aliceblue;
     text-decoration: none;
     margin-top: 10px;
@@ -141,7 +135,9 @@ body{
 
 form input[type="text"],
 form input[type="password"],
-form input[type="email"]{
+form input[type="number"],
+form input[type="email"],
+select{
     padding: 5px;
     border-radius: 2px;
     border: 1px solid #ccc;
@@ -170,4 +166,77 @@ footer{
     padding-right: 20px;
     margin-top: 50px;
     line-height: 47px;
+}
+
+#selector-theme{
+    position: fixed;
+    top: 40px;
+    background-color: rgba(51, 51, 51, 0.5);
+    width: 50px;
+    height: 100px;
+}
+
+#to-green,
+#to-red,
+#to-blue{
+    width: 30px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#to-green{
+    background-color: #235e3d;
+}
+
+#to-red{
+    background-color: #CA3413;
+
+}
+#to-blue{
+    background-color: #1f87c4;
+}
+
+.subir{
+    color: #eee;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 40px;
+}
+
+#acordeon{
+    margin-top: 20px;
+}
+
+#reloj{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    border: 5px dashed #333;
+    width: 30%;
+    padding: 30px;
+    margin: 0px auto;
+}
+
+#form-contact{
+    width: 50%;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-contact label{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
 }

@@ -14,16 +14,18 @@
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!-- Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="js/jquery-ui-1.13.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.1/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui-1.13.1/jquery-ui.min.js"></script>
 
-    <!-- Moment -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es-mx.min.js" integrity="sha512-Qy4cmZ6v7vnVEc0cn/BIj9q15eB98do4hMvu8xtc/H+v+YYpdpDrB35flHS3NPLbZUpe1npSYY/u+Gi3UB61vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Plugin validacion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
     <!-- Java Script -->
     <script type="text/javascript" src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -49,19 +51,35 @@
             </nav>
         </header>
 
-        <!-- SLIDER -->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="src/hojas.jpg" title="Funky roots"></div>
-                <div><img src="src/rojo.jpg" title="The long and winding road"></div>
-                <div><img src="src/cielo.jpg" title="Happy trees"></div>
-              </div>
-        </div>
-
         <!-- CONTENIDO -->
         <section id="content">
-            <div id="posts">
-                <!-- cargar posts desde Json -->
+            <div id="box">
+                <!-- Cargar formulario de contacto -->
+                <h2>Contacto</h2>
+                <form action="" method="post" id="form-contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric">
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" data-validation="alphanumeric">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" data-validation="email">
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="text" name="date" data-validation="date" data-validation-format="dd/mm/yyyy">
+
+                    <label for="age">Edad</label>
+                    <input type="number" name="age" data-validation="number">
+
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
             <aside id="aside">
                 <div id="about">
@@ -80,6 +98,7 @@
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="form_password">
                         <input type="submit" value="Entrar">
+                        
                     </form>
                 </div>
             </aside>

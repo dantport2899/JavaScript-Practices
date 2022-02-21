@@ -14,16 +14,15 @@
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!-- Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <!-- Moment -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es-mx.min.js" integrity="sha512-Qy4cmZ6v7vnVEc0cn/BIj9q15eB98do4hMvu8xtc/H+v+YYpdpDrB35flHS3NPLbZUpe1npSYY/u+Gi3UB61vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="js/jquery-ui-1.13.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.1/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui-1.13.1/jquery-ui.min.js"></script>
 
     <!-- Java Script -->
     <script type="text/javascript" src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -49,19 +48,32 @@
             </nav>
         </header>
 
-        <!-- SLIDER -->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="src/hojas.jpg" title="Funky roots"></div>
-                <div><img src="src/rojo.jpg" title="The long and winding road"></div>
-                <div><img src="src/cielo.jpg" title="Happy trees"></div>
-              </div>
-        </div>
-
         <!-- CONTENIDO -->
         <section id="content">
-            <div id="posts">
-                <!-- cargar posts desde Json -->
+            <div id="box">
+                <!-- cargar el acordeon -->
+                <h2>Sobre mi</h2>
+                <div id="acordeon">
+                    <h3>¿Quienes somos?</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe tempore quasi autem! Vero quos nulla deserunt corporis, est id voluptatem? Placeat eaque voluptatum, non soluta omnis cum delectus hic.</p>
+                    </div>
+
+                    <h3>¿Que hacemos?</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe tempore quasi autem! Vero quos nulla deserunt corporis, est id voluptatem? Placeat eaque voluptatum, non soluta omnis cum delectus hic.</p>
+                    </div>
+
+                    <h3>¿Quienes son nuestros clientes?</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe tempore quasi autem! Vero quos nulla deserunt corporis, est id voluptatem? Placeat eaque voluptatum, non soluta omnis cum delectus hic.</p>
+                    </div>
+
+                    <h3>¿Que se viene al futuro?</h3>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero saepe tempore quasi autem! Vero quos nulla deserunt corporis, est id voluptatem? Placeat eaque voluptatum, non soluta omnis cum delectus hic.</p>
+                    </div>
+                </div>
             </div>
             <aside id="aside">
                 <div id="about">
