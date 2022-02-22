@@ -69,6 +69,21 @@ $(document).ready(function(){
         }, 1000);
         
     }
+
+
+    // cargar solo en la seccion de contacto
+    if(window.location.href.indexOf('contact') >-1){
+
+        //agregar selector de fecha por calendario
+        $("form input[name='date']").datepicker({
+            dateFormat: 'dd/mm/yy'
+        });
+
+
+        //agregas la funcionalidad de validacion
+        $.validate({
+        });
+    }
    
 
     //selector de tema
