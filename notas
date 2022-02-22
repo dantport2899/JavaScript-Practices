@@ -1,0 +1,14 @@
+crear carpeta ts y js separadas
+
+instalar el pligin : TypeScript Auto Compiler
+
+en la terminal en la carpeta raiz escribir el siguiente comando: tsc --init
+
+desactivar el comentario: 
+"outDir": "./js",  
+y agregar la carpeta la que iran destinados los js
+
+modficiar la linea:
+"strictPropertyInitialization": false,  
+
+listo, los archivos ts se actualizaran junto a los js
