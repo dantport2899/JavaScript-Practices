@@ -11,4 +11,8 @@ y agregar la carpeta la que iran destinados los js
 modficiar la linea:
 "strictPropertyInitialization": false,  
 
+para evitar errores en la decoracion desactivar lo siguiente:
+"experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
+
+
 listo, los archivos ts se actualizaran junto a los js
