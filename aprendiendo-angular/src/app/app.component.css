@@ -1,0 +1,28 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+nav{
+    background-color: red;
+    border-radius: 10px;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+li{
+    margin-right: 40px;
+}
+
+a{
+    color: white;
+}
+
+
+.active{
+   color: yellow; 
+}

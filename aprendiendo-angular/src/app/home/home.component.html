@@ -1,0 +1,20 @@
+<h1>Pagina Principal</h1>
+<input type="text" [(ngModel)]="nombre">
+<input type="number" [(ngModel)]="seguidores">
+<button (click)="ircursos()">Ir al curso</button>
+
+
+<!-- ng if con else -->
+<div *ngIf="identificado; then siidentificado else noIdentificado"></div>
+
+<ng-template #siidentificado>
+    <h3>Estas identificado en la aplicacion</h3>
+    <button (click)="unsetIdentificado()">Dorrar Identificacion</button>
+</ng-template>
+
+<ng-template #noIdentificado>
+    <p>No estas identificado, pulsa este boton para identificarte</p>
+    <button (click)="setIdentificado()">Identificar</button>
+</ng-template>
+<!-- ng if con else -->
+
