@@ -3,7 +3,8 @@ import { Zapatilla } from "../models/zapatilla";
 
 @Component({
     selector: 'zapatillas',
-    templateUrl: './zapatillas.component.html'
+    templateUrl: './zapatillas.component.html',
+    styleUrls: ['./zapatillas.component.css']
 })
 
 export class ZapatillasComponent implements OnInit{
@@ -45,5 +46,18 @@ export class ZapatillasComponent implements OnInit{
 
     addMarca(){
         this.marcas.push(this.mimarca);
+    }
+
+    borrarmarca(index:number){
+        // delete this.marcas[index];
+        this.marcas.splice(index,1);
+    }
+
+    onBlur(){
+        alert("Has salido del input");
+    }
+
+    mostrarpalabra(){
+        alert(this.mimarca);
     }
 }
