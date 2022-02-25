@@ -1,10 +1,20 @@
-<div id="container">
-  <h1>Bienvenido a mi primer proyecto en angular</h1>
-</div>
-<button (click)="ocultarvideojuegos(false)" *ngIf="mostrarvideojuegos">Ocultar</button>
-<button (click)="ocultarvideojuegos(true)" *ngIf="!mostrarvideojuegos">Mostrar</button>
+<div id="container" [ngStyle]="{ 
+  background: config.fondo,
+  padding: '20px',
+  border: '5px solid ' + config.color
+}">
+  <h1>{{ title }}</h1>
+  <p>{{ descripcion }}</p>
+  <button (click)="ocultarvideojuegos(false)" *ngIf="mostrarvideojuegos">
+    Ocultar
+  </button>
+  <button (click)="ocultarvideojuegos(true)" *ngIf="!mostrarvideojuegos">
+    Mostrar
+  </button>
 
-<videojuego *ngIf="mostrarvideojuegos"></videojuego>
-<zapatillas></zapatillas>
-<cursos></cursos>
+  <videojuego *ngIf="mostrarvideojuegos"></videojuego>
+  <zapatillas></zapatillas>
+  <cursos></cursos>
+</div>
+
 <router-outlet></router-outlet>
