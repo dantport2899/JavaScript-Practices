@@ -1,0 +1,14 @@
+{{fecha | date:'dd/MM/yyyy h:mm a z'}}
+<hr>
+<input type="text" [(ngModel)]="userid" (keyup.enter)="cargausuario()">
+<br>
+<br>
+<div *ngIf="!user">
+    Cargando...
+</div>
+<div *ngIf="user">
+    <img src="{{user.avatar}}" width="200px" alt="">
+    <h2>{{user.first_name+" "+user.last_name | uppercase}}</h2>
+</div>
+
+{{4 | Calculadora:2}} <!--se usa la pipe para realizar operaciones y reutilizar codigo -->
