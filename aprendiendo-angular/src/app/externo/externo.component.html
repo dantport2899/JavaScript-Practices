@@ -12,3 +12,23 @@
 </div>
 
 {{4 | Calculadora:2}} <!--se usa la pipe para realizar operaciones y reutilizar codigo -->
+
+
+<h2>Crear usuario</h2>
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <label for="name">Nombre</label>
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="new_user.name" required pattern="[a-zA-Z]+">
+    <span *ngIf="name.touched && !name.valid">El nombre es obligatorio</span>
+
+    <label for="job">Trabajo</label>
+    <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required pattern="[a-zA-Z]+">
+    <span *ngIf="job.touched && !job.valid">El trabajo es obligatorio</span>
+
+    <input type="submit" value="Enviar" [disabled]="!newUser.valid">
+
+</form>
+
+<div *ngIf="usuario_guardado">
+    <h3>{{usuario_guardado.name}}</h3>
+    <p>{{usuario_guardado.job}}</p>
+</div>
