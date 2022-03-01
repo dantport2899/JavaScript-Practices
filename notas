@@ -1,3 +1,4 @@
+------------------------ ts y js sincronizados---------------------
 crear carpeta ts y js separadas
 
 instalar el pligin : TypeScript Auto Compiler
@@ -16,3 +17,16 @@ para evitar errores en la decoracion desactivar lo siguiente:
 
 
 listo, los archivos ts se actualizaran junto a los js
+
+
+
+------------------------------backend-------------
+npm install express --save
+
+npm install body-parser --save
+
+npm install connect-multiparty --save
+
+npm isntall -s mongoose --save
+
+npm install nodemon --save-dev
