@@ -1,5 +1,7 @@
 'use strict'
 var Project = require('../models/project');
+//para la validacion de imagenes
+var fs = require('fs')
 
 var controller = {
     home: function(req, res){
@@ -75,7 +77,7 @@ var controller = {
         Project.findByIdAndUpdate(projectid,update, {new:true},(err,projectUpdated)=>{
             if(err) return res.status(500).send({messaje:"Error al actualizar"});
 
-            if(!projectUpdated) return res.status(500).send({messaje:"No existe el proyecto para actualizar"});
+            if(!projectUpdated) return res.status(404).send({messaje:"No existe el proyecto para actualizar"});
 
             return res.status(200).send({
                 project: projectUpdated
@@ -96,6 +98,40 @@ var controller = {
                 project: projectRemoved
             });
         });       
+    },
+    uploadImage: function(req,res){
+        var projectid = req.params.id;
+        var filename ='Imagen no subida...';
+
+        if(req.files){
+            var filePath = req.files.image.path;
+            var filesplit = filePath.split('\\');
+            var filename = filesplit[1];
+            var extSplit = filename.split('\.');
+            var fileext = extSplit[1];
+
+            if(fileext == "png" || fileext == "jpg" || fileext == "jpeg" || fileext == "gif"){
+                Project.findByIdAndUpdate(projectid, {image: filename}, {new:true}, (err, projectUpdated)=>{
+                    if(err) return res.status(500).send({messaje:"Error al subir la iamgen"});
+    
+                    if(!projectUpdated) return res.status(404).send({messaje:"No existe el proyecto para actualizar"});
+                        
+                    return res.status(200).send({
+                        project: projectUpdated
+                     });
+                });
+            }else{
+              fs.unlink(filePath, (err)=>{
+                return res.status(200).send({
+                    messaje: 'la extension no es valida'
+                });
+              });  
+            }
+        }else{
+            return res.status(200).send({
+                messaje: filename
+             });
+        }
     }
 };
 
