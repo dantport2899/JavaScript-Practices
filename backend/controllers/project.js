@@ -1,7 +1,8 @@
 'use strict'
 var Project = require('../models/project');
 //para la validacion de imagenes
-var fs = require('fs')
+var fs = require('fs');
+var path = require('path');
 
 var controller = {
     home: function(req, res){
@@ -132,7 +133,22 @@ var controller = {
                 messaje: filename
              });
         }
+    },
+    getImageFile: function(req,res){
+        var file = req.params.image;
+        var path_file = './uploads/'+file;
+
+        fs.exists(path_file, (exist)=>{
+            if(exist){
+                return res.sendFile(path.resolve(path_file));
+            }else{
+                return res.status(200).send({
+                    messaje: "No existe la imagen..."
+                });
+            }
+        });
     }
+
 };
 
 module.exports = controller;

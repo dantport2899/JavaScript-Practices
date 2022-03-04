@@ -10,21 +10,28 @@ import { Global } from 'src/app/services/global';
   providers: [ProjectService]
 })
 export class ProjectsComponent implements OnInit {
+  public projects: Project[]=[];
+  public url: string;
 
   constructor(
     private _projectservice: ProjectService
-  ) { }
+  ) {
+    this.url = Global.url;
+   }
 
   ngOnInit(): void {
+    this.getProjects();
   }
 
   getProjects(){
     this._projectservice.getProjects().subscribe(
       response =>{
-        
+        if(response.projects){
+          this.projects = response.projects;
+        }
       },
       error =>{
-
+        console.log(<any>error);
       }
     );
   }
