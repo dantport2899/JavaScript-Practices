@@ -257,3 +257,8 @@ form input[type="submit"]:hover{
 .project img{
     width: 100%;
 }
+
+.project a{
+    text-decoration: none;
+    color: black;
+}
