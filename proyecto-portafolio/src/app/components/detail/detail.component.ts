@@ -3,6 +3,7 @@ import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/models/project';
 import { Global } from 'src/app/services/global';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detail',
@@ -13,6 +14,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class DetailComponent implements OnInit {
   public url:string;
   public project!: Project;
+  public confirm:boolean = false;
 
   constructor(
     private _proyjectservice: ProjectService,
@@ -40,5 +42,23 @@ export class DetailComponent implements OnInit {
        }
     )
   }
+
+  setConfirm(confirm:boolean){
+    this.confirm = confirm;
+  }
+
+  deleteProject(id:string){
+    this._proyjectservice.deleteProject(id).subscribe(
+      response=>{
+        if(response.project){
+          this._router.navigate(['/proyectos']);
+        }
+      },
+      error=>{
+        console.log(<any>error);
+      }
+    );
+  }
+
 
 }
