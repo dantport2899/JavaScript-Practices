@@ -1,4 +1,4 @@
------------------------- ts y js sincronizados---------------------
+**------------------------ ts y js sincronizados---------------------**
 crear carpeta ts y js separadas
 
 instalar el pligin : TypeScript Auto Compiler
@@ -20,7 +20,7 @@ listo, los archivos ts se actualizaran junto a los js
 
 
 
-------------------------------backend-------------
+**------------------------------backend-------------**
 npm install express --save
 
 npm install body-parser --save
@@ -30,3 +30,23 @@ npm install connect-multiparty --save
 npm isntall -s mongoose --save
 
 npm install nodemon --save-dev
+
+
+
+**---------------------------integrar librerias----------------**
+ir a la web npm y buscar la libreria deseada
+
+instalar el paquete de manera local
+
+install --save jquery
+
+registrar la libreria en la seccion de scripts de el documentos angular.json
+
+***solucion al error del simbolo $:***
+npm install --save-dev @types/jquery
+***importar todo lo relaciondo al jquery en el ts de la vista***
+import * as $ from "jquery";
+
+**-------------------------importar de manera manual---------------------------------**
+pegar libreria en la carpeta assets
+poner las direcciones de los archivos js y css en sus lugares respectivos en el archivo angular.json
