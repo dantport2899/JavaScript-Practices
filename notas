@@ -50,3 +50,7 @@ import * as $ from "jquery";
 **-------------------------importar de manera manual---------------------------------**
 pegar libreria en la carpeta assets
 poner las direcciones de los archivos js y css en sus lugares respectivos en el archivo angular.json
+
+
+**-----Crear directivas------**
+ng g directive resaltado

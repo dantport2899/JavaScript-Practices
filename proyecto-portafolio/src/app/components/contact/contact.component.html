@@ -1,11 +1,25 @@
 
 <div id="container">
   <h1>Contacto</h1>
+
+  <div id="texto" #textos>
+    <p appResaltado>Esta es la pagina de contacto, puedes enviarnos cualquier duda</p>
+  </div>
+  
+  <br>
+  <hr>
+
   <label for="">Tamaño del slider</label>
   <input type="number" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()">
   <button (click)="cargarSlider()">Cargar slider</button>
   <button (click)="resetearSlider()">Resetear slider</button>
   <div *ngIf="anchuratoSlider">
-  <slider [anchura]="anchuratoSlider" [etiquetas]="captions"></slider>
+  <slider [anchura]="anchuratoSlider"
+   [etiquetas]="captions"
+   (conseguirautor)="getAutor($event)"
+   ></slider>
+   <p>Autor: {{autor.nombre}}</p>
+   <p>Web: {{autor.web}}</p>
+   <p>Youtube: {{autor.youtube}}</p>
   </div>
 </div>
