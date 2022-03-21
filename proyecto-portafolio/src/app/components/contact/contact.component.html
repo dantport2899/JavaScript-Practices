@@ -1,5 +1,11 @@
-<div class="bxslider">
-    <div><img src="https://battler.gg/wp-content/uploads/2021/04/comprar-pc-gamer-2021-battler.jpg"></div>
-    <div><img src="https://www.destreaming.es/wp-content/uploads/2020/11/pc_para_streaming_gaming.jpg"></div>
-    <div><img src="https://www.quonty.com/blog/wp-content/uploads/2020/02/tienda-online-de-informatica-y-tecnologia-14.jpg"></div>
+
+<div id="container">
+  <h1>Contacto</h1>
+  <label for="">Tamaño del slider</label>
+  <input type="number" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()">
+  <button (click)="cargarSlider()">Cargar slider</button>
+  <button (click)="resetearSlider()">Resetear slider</button>
+  <div *ngIf="anchuratoSlider">
+  <slider [anchura]="anchuratoSlider" [etiquetas]="captions"></slider>
   </div>
+</div>

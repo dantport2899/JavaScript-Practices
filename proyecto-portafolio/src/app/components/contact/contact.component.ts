@@ -7,20 +7,21 @@ import * as $ from "jquery";
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  public widthSlider: number = 300;
+  public anchuratoSlider!: any;
+  public captions: boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
-    $("#logo").click(function(e){
-      e.preventDefault(); //previene la redireccion del enlace
-      $("header").css("background","#00FFF3");
-    });
+   
+  }
+  cargarSlider(){
+    this.anchuratoSlider = this.widthSlider;
+  }
 
-    ($('.bxslider')as any).bxSlider({
-      mode: 'fade',
-      captions: true,
-      slideWidth: 600  
-    });
+  resetearSlider(){
+    this.anchuratoSlider = 0;
   }
 
 }
