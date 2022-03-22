@@ -18,6 +18,11 @@ para evitar errores en la decoracion desactivar lo siguiente:
 
 listo, los archivos ts se actualizaran junto a los js
 
+**------------iniciar un proyecto en node js--------------**
+
+npm init
+
+npm install socket.io --save
 
 
 **------------------------------backend-------------**
